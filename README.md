@@ -41,6 +41,7 @@
 ### Key Features <a name="key-features"></a>
 
 - [x] **Setup and controllers**
+- [X] **Controllers specs**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -93,7 +94,6 @@ rails server
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Controllers specs**
 - [ ] **Creating a data model**
 - [ ] **Processing data in models**
 - [ ] **Views**
