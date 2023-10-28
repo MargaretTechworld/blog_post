@@ -42,6 +42,7 @@
 
 - [x] **Setup and controllers**
 - [X] **Controllers specs**
+- [X] **Creating a data model**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -94,7 +95,6 @@ rails server
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Creating a data model**
 - [ ] **Processing data in models**
 - [ ] **Views**
 - [ ] **Forms**
