@@ -30,7 +30,7 @@ RSpec.describe 'Users', type: :request do
     end
   end
 
-   describe 'GET /users/:id' do
+  describe 'GET /users/:id' do
     it 'renders the user show page' do
       get "/users/:#{user.id}"
       expect(response).to have_http_status(200)

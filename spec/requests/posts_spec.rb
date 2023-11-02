@@ -45,5 +45,4 @@ RSpec.describe 'Posts', type: :request do
       expect(response.body).to include('All Posts by User')
     end
   end
-
 end
