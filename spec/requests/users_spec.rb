@@ -9,6 +9,7 @@ RSpec.describe 'Users', type: :request do
     end
   end
 
+
   describe 'GET /users' do
     it 'renders the users index page' do
       get '/users'
@@ -16,11 +17,37 @@ RSpec.describe 'Users', type: :request do
     end
   end
 
+  describe 'GET /users' do
+    it 'renders the user index page with correct template' do
+      get '/users'
+      expect(response).to render_template(:index)
+    end
+  end
+  describe 'GET /users' do
+    it 'renders the user index page with correct placeholder text' do
+      get '/users'
+      expect(response.body).to include('User 1')
+    end
+  end
 
-  describe 'GET /users/:id' do
+   describe 'GET /users/:id' do
     it 'renders the user show page' do
       get "/users/:#{user.id}"
       expect(response).to have_http_status(200)
+    end
+  end
+
+  describe 'GET /users/:id' do
+    it 'renders the user show page with correct template' do
+      get "/users/#{user.id}"
+      expect(response).to render_template(:show)
+    end
+  end
+
+  describe 'GET /users/:id' do
+    it 'renders the user show page with correct placeholder text' do
+      get "/users/#{user.id}"
+      expect(response.body).to include('All User')
     end
   end
 end
