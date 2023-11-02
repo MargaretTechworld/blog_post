@@ -9,7 +9,6 @@ RSpec.describe 'Users', type: :request do
     end
   end
 
-
   describe 'GET /users' do
     it 'renders the users index page' do
       get '/users'
