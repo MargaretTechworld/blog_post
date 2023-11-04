@@ -7,6 +7,11 @@
 </div>
 </div>
 <p><%= @post.text %></p>
+<% if user_already_liked?(@post) %>
+<%= button_to "Dislike", user_post_like_path(current_user, @post), method: :delete, class:"all-post-btn" %>
+<% else %>
+<%= button_to "Like", user_post_likes_path(current_user, @post), method: :post, class:"all-post-btn"  %>
+<% end %>
 </div>
 <% if @post.comments.any? %>
   <ul class= "comment-div">
@@ -16,4 +21,14 @@
   </ul>
   <% else %>
   <% end %>
+  <h2>Add a comment</h2>
+  <%= form_with model:[current_user, @post, Comment.new] do |form| %>
+    <div>
+    <%= form.label :text %>
+    <%= form.text_field :text%>
+    </div>
+    <div>
+    <%= form.submit%>
+    </div>
+<% end %>
  
