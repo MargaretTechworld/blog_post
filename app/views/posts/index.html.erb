@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>All Posts by User</title>
-</head>
-<body>
-<h1>All Posts by User</h1 <ul>
-<li>Post 1</li>
-<li>Post 2</li>
-</ul>
-</body>
-</html>
+<%= render 'users/user_info', user: @user %>
+<% @posts.each do |post| %>
+  <%= render 'post_info', user: @user, post: post%>
+  <% if post.comments.any? %>
+  <ul class= "comment-div">
+  <% post.recent_comments.each do |comment| %>
+    <li><%= comment.user.name %>: <%= comment.text %></li>
+  <% end %>
+  </ul>
+  <% else %>
+  <% end %>
+  <% end %>
+  <div class="pagination">
+  <%= link_to "Pagination", user_posts_path(@user), class:"all-post-btn"  %>
+  </div>
+

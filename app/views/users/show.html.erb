@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>All User</title>
-</head>
-<body>
-<h1>All User</h1 <ul>
-<li>User 1</li>
-<li>User 2</li>
-</ul>
-</body>
-</html>
+<%= render 'user_info', user: @user %>
+<div class="user-details">
+<div class="user-bio-div">
+  <p class="bio-tag">Bio</p>
+  <p class="bio"><%= @user.bio %></p>
+</div>
+<% @user.recent_post.each do |post| %>
+    <%= render 'posts/post_info', user: @user, post: post %>
+<% end %>
+<%= link_to "See all post", user_posts_path(@user), class:"all-post-btn"  %>
+</div>
