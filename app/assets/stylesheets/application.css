@@ -1,90 +1,105 @@
-a{
+a {
   text-decoration: none;
-  color:black;
+  color: black;
 }
-p{
+
+p {
   margin: 0;
 }
-.user-home{
+
+.user-home {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.user-img-div{
+
+.user-img-div {
   width: 100px;
   height: 100px;
   border: 2px solid black;
   margin-top: 10px;
 }
-.user-img{
+
+.user-img {
   width: 100px;
   height: 100px;
   display: flex;
 }
-.user-info{
+
+.user-info {
   width: 90%;
   height: 80px;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
 }
-.user-name{
+
+.user-name {
   font-size: 2em;
   text-decoration: none;
   margin-left: 10px;
   font-weight: bold;
 }
-.user-num-posts{
+
+.user-num-posts {
   align-self: end;
   margin-right: 15px;
 }
-.user-bio-div{
+
+.user-bio-div {
   width: 99.1%;
   margin-top: 10px;
   border: 2px solid black;
 }
-.bio-tag{
+
+.bio-tag {
   font-size: 1.3em;
   margin-left: 10px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.bio{
-  margin-left: 10px;
 
+.bio {
+  margin-left: 10px;
 }
-.user-post-div{
+
+.user-post-div {
   width: 99.1%;
   margin-top: 10px;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
 }
-.post-tag{
+
+.post-tag {
   font-size: 1em;
   margin-left: 10px;
   font-weight: bold;
 }
-.post-title{
- margin-left: 10px;
- font-size: 1.3em;
+
+.post-title {
   margin-left: 10px;
+  font-size: 1.3em;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.post-text{
-margin-left: 10px;
+
+.post-text {
+  margin-left: 10px;
 }
-.comments-likes{
+
+.comments-likes {
   align-self: flex-end;
   display: flex;
   margin-right: 15px;
 }
-.user-details{
+
+.user-details {
   display: flex;
   flex-direction: column;
 }
-.all-post-btn{
+
+.all-post-btn {
   margin-top: 10px;
   padding: 4px 10px;
   font-size: 16px;
@@ -95,36 +110,43 @@ margin-left: 10px;
   box-shadow: 4px 3px 2px rgba(0, 0, 0, 30);
   align-self: center;
 }
-li{
+
+li {
   list-style: none;
   margin-left: 7px;
 }
-.comment-div{
-width: 98.3%;
-border: 2px solid black;
-padding: 5px;
-margin-bottom: 30px;
+
+.comment-div {
+  width: 98.3%;
+  border: 2px solid black;
+  padding: 5px;
+  margin-bottom: 30px;
 }
-ul{
+
+ul {
   margin: 0.5px;
 }
-.pagination{
+
+.pagination {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.post-show{
+
+.post-show {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.post-all{
+
+.post-all {
   width: 96%;
   border: 2px solid black;
   display: grid;
   gap: 1rem;
   padding: 20px;
 }
-.span{
+
+.span {
   font-weight: bold;
 }
