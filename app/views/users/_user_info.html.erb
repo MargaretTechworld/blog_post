@@ -1,0 +1,9 @@
+<div class="user-home">
+    <div class="user-img-div">
+    <img class="user-img" src="<%= user.photo %>">
+    </div>
+    <div class="user-info">
+    <p class="user-name"><%= link_to user.name, user_path(user) %></p>
+    <p class="user-num-posts">Number of Posts: <%= user.posts.length %></p>
+    </div>
+    </div>
