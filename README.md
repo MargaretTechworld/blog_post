@@ -89,6 +89,11 @@ rails server
 - GitHub: [MargaretTechworld](https://github.com/MargaretTechworld)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/margaret-kojo-musa/)
 
+👤 **Berhanu Baye**
+- GitHub: [@BranBayou](https://github.com/BranBayou)
+- Twitter: [@bran-baye](https://twitter.com/bran_baye)
+- LinkedIn: [Berhanu Baye](https://www.linkedin.com/in/bran-baye)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
