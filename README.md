@@ -43,6 +43,11 @@
 - [x] **Setup and controllers**
 - [X] **Controllers specs**
 - [X] **Creating a data model**
+- [X] **Processing data in models**
+- [X] **Views**
+- [X] **Forms**
+- [X] **Validations, Model specs, and n+1 problems**
+- [X] **Add Devise**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -99,12 +104,6 @@ rails server
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **Processing data in models**
-- [ ] **Views**
-- [ ] **Forms**
-- [ ] **Validations, Model specs, and n+1 problems**
-- [ ] **Add Devise**
 - [ ] **Add authorization rules**
 - [ ] **Integration specs for Views**
 - [ ] **Add API endpoints**
