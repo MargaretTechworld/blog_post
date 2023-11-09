@@ -150,3 +150,8 @@ ul {
 .span {
   font-weight: bold;
 }
+.forms{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
