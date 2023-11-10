@@ -6,9 +6,10 @@ class Ability
 
     can :read, :all
 
-    if user.role == 'admin'
+    if user.admin?
       can :manage, :all
     else
+      can :create, [Post, Comment]
       can :destroy, Post, author_id: user.id
       can :destroy, Comment, user_id: user.id
     end
