@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
@@ -19,6 +20,15 @@ class PostsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @author = @post.author
+    @post.likes.destroy_all
+    @post.comments.destroy_all
+    @post.destroy
+    redirect_to user_posts_path(@author)
   end
 
   private

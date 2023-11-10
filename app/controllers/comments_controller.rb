@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
@@ -6,6 +7,14 @@ class CommentsController < ApplicationController
     return unless @comment.save
 
     redirect_to user_post_path(current_user, @post)
+  end
+
+  def destroy
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+    @comment.destroy
+    redirect_to user_post_path(@user, @post)
   end
 
   private

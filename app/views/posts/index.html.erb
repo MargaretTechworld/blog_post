@@ -1,4 +1,3 @@
-<%= link_to "create new post", new_user_post_path, class:"all-post-btn"  %>
 <%= render 'users/user_info', user: @user %>
 <% @posts.each do |post| %>
   <%= render 'post_info', user: @user, post: post%>
@@ -11,6 +10,9 @@
   <% else %>
   <% end %>
   <% end %>
+  <% if current_user == @user %>
+  <%= link_to "create new post", new_user_post_path, class:"all-post-btn"  %>
+<% end %>
   <div class="pagination">
   <%= link_to "Pagination", user_posts_path(@user), class:"all-post-btn"  %>
   </div>
