@@ -7,22 +7,32 @@
 </div>
 </div>
 <p><%= @post.text %></p>
-<% if user_already_liked?(@post) %>
-<%= button_to "Dislike", user_post_like_path(current_user, @post), method: :delete, class:"all-post-btn" %>
-<% else %>
-<%= button_to "Like", user_post_likes_path(current_user, @post), method: :post, class:"all-post-btn"  %>
-<% end %>
 </div>
 <% if @post.comments.any? %>
   <ul class= "comment-div">
   <% @post.comments.each do |comment| %>
     <li><%= comment.user.name %>: <%= comment.text %></li>
+
+    <% if can?(:destroy, comment) %>
+    <%= button_to "Delete Comment", user_post_comment_path(current_user, @post, comment), method: :delete, class: "all-post-btn" %>
+  <% end %>
+  
   <% end %>
   </ul>
   <% else %>
   <% end %>
-  <h2>Add a comment</h2>
-  <%= form_with model:[current_user, @post, Comment.new] do |form| %>
+  <% if user_already_liked?(@post) %>
+<%= button_to "Dislike", user_post_like_path(current_user, @post), method: :delete, class:"all-post-btn" %>
+<% else %>
+<%= button_to "Like", user_post_likes_path(current_user, @post), method: :post, class:"all-post-btn"  %>
+<% end %>
+
+<% if can?(:destroy, @post) %>
+  <%= button_to "Delete post", user_post_path(current_user, @post), method: :delete, class: "all-post-btn" %>
+<% end %>
+  
+<h2>Add a comment</h2>  
+<%= form_with model:[current_user, @post, Comment.new] do |form| %>
     <div>
     <%= form.label :text %>
     <%= form.text_field :text%>
@@ -31,4 +41,3 @@
     <%= form.submit%>
     </div>
 <% end %>
- 
