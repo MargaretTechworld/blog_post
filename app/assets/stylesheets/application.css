@@ -145,7 +145,7 @@ ul {
 
 .post-all {
   width: 96%;
-  border: 2px solid black;
+  border: 1px solid black;
   display: grid;
   gap: 1rem;
   padding: 20px;
